@@ -133,4 +133,45 @@ const chan = client.channels.cache.get(channel);
             
             }
 
+   message.channel.send(`${math.evaluate(`${message.content} + 1`)}`)
+ message.channel.stopTyping();
+
+ }
+
+        
+});
+
+
+// Do not change anything here
+require('http').createServer((req, res) => res.end(`
+ |-----------------------------------------|
+ |              Informations               |
+ |-----------------------------------------|
+ |• Alive: 24/7                            |
+ |-----------------------------------------|
+ |• coder: TN hazem#6101                   |
+ |-----------------------------------------|
+ |• Server: https://discord.gg/c4clan      |
+ |-----------------------------------------|
+ |                                         |
+ |-----------------------------------------|
+ |• License: Apache License 2.0            |
+ |-----------------------------------------|
+`)).listen(3000) //Dont remove this 
+
+client.on("ready", () => {
+   client.user.setStatus("dnd"); // You can change it to online, dnd, idle
+
+ console.log(`Successfully logined as ${client.user.tag} `)
+});
+
+
+
+
+//  For Watching Status
+// client.on("ready", () => {
+// client.user.setActivity(`Chilling with owner`, { type:         "STREAMING",
+// url: "https://www.twitch.tv/nocopyrightsounds"})
+// console.log(`Successfully logined as ${client.user.tag}});
+
 client.login(process.env.TOKEN);
